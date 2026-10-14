@@ -51,7 +51,7 @@
       $("stageKicker").textContent = "Chapter 04 · A family memory";
       $("stageTitle").textContent = "One more memory";
       content.innerHTML = '<img class="stage-photo" src="assets/parents-anniversary.jpeg" alt="A family photograph" onerror="this.style.display=\\"none\\";this.nextElementSibling.style.display=\\"grid\\""><div class="placeholder" style="display:none">Your third family photo will appear here once its file is uploaded.</div><p>ഇതാ മറ്റൊരു പ്രിയപ്പെട്ട ഓർമ്മ. ചിത്രം നോക്കി കുറച്ചു നേരം ഒരുമിച്ച് ഇരിക്കൂ.</p>';
-      $("stageButton").textContent = "Continue to your video";
+      $("stageButton").textContent = "Continue to the video";
     } else if (stageIndex === 3) {
       $("stageKicker").textContent = "Chapter 05 · Your anniversary video";
       $("stageTitle").textContent = "A message from your children";
