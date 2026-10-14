@@ -50,3 +50,12 @@ A static GitHub Pages site cannot synchronise two parents' progress securely on 
 ## GitHub Pages
 
 Repository Settings → Pages → Build and deployment → Deploy from a branch → `main` → `/(root)`. Once Pages finishes deploying, the likely URL is `https://aether56tk.github.io/family/`; confirm the published URL in Settings → Pages.
+
+
+## New second-step photo
+
+The uploaded childhood photo of the little one beside the yellow bicycle is intended to appear **immediately after both parents complete their separate letters**. It is the visual clue on the shared-key screen; after they solve that key together, the next page should reveal the photo/video of the user and younger sister.
+
+To wire in the actual photo, add the uploaded image to `assets/step-two.jpg` (the source image is currently attached in the ChatGPT conversation, not yet committed as a binary file in this repository). The next stage should display the sibling photo/video and ask for its date in **DDMM** format.
+
+The planned shared code remains `0520` (mother's day `05` followed by father's day `20`). The current website is still a prototype: the shared gate and cross-phone progress must be fully implemented and tested before launch.
