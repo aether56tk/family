@@ -65,6 +65,6 @@ The planned shared code remains `0520` (mother's day `05` followed by father's d
 
 The user supplied a photograph of themself standing with their younger sister. It is intended for Chapter 03, after the childhood bicycle-photo clue and shared four-digit key. Add that photo to the repository as `assets/me-and-sister.jpg`. The website now references that asset path; the image binary itself has not yet been uploaded to GitHub.
 
-Parents must identify the **day, month, and year** when that photo was taken and enter the full date as `DDMMYYYY`. Update `CONFIG.photoDate` from `00000000` to the correct eight digits once the date is confirmed. The site will not accept the placeholder date.
+Parents must identify the **day, month, and year** when that photo was taken and enter the full date as `DDMMYYYY`. The confirmed photo date is **2 March 2021**, so set `CONFIG.photoDate` to `02032021`. The website expects eight digits in DDMMYYYY format.
 
 The earlier childhood bicycle image belongs in `assets/step-two.jpg` for the shared-key step.
