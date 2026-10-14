@@ -40,12 +40,12 @@
     if (stageIndex === 0) {
       $("stageKicker").textContent = "Chapter 02 · A memory from home";
       $("stageTitle").textContent = "First, one little memory";
-      content.innerHTML = '<img class="stage-photo" src="assets/step-two.jpg" alt="Childhood memory beside a yellow bicycle"><p>ഈ പഴയ ഓർമ്മ നോക്കൂ. അടുത്ത വാതിൽ തുറക്കാൻ നിങ്ങൾ രണ്ടുപേരും ചേർന്ന് കണ്ടെത്തിയ നാല് അക്കങ്ങൾ നൽകൂ.</p><label for="answer">Shared four-digit key</label><input id="answer" inputmode="numeric" maxlength="4" placeholder="Four-digit key">';
+      content.innerHTML = '<img class="stage-photo" src="assets/step-two.jpg" alt="Childhood memory beside a yellow bicycle" loading="eager" decoding="async"><p>ഈ പഴയ ഓർമ്മ നോക്കൂ. അടുത്ത വാതിൽ തുറക്കാൻ നിങ്ങൾ രണ്ടുപേരും ചേർന്ന് കണ്ടെത്തിയ നാല് അക്കങ്ങൾ നൽകൂ.</p><label for="answer">Shared four-digit key</label><input id="answer" inputmode="numeric" maxlength="4" placeholder="Four-digit key">';
       $("stageButton").textContent = "Unlock next memory";
     } else if (stageIndex === 1) {
       $("stageKicker").textContent = "Chapter 03 · You and your sister";
       $("stageTitle").textContent = "When was this picture taken?";
-      content.innerHTML = '<img class="stage-photo" src="assets/me-and-sister.jpg" alt="A photograph of siblings together"><p>ഈ ചിത്രം എടുത്ത ദിവസത്തെ ഓർമ്മയുണ്ടോ? നിങ്ങളുടെ ഫോട്ടോ ഗാലറികൾ പരിശോധിച്ച് തീയതിയും മാസവും വർഷവും കണ്ടെത്തൂ. രണ്ടുപേരും സമ്മതിച്ചശേഷം നൽകുക.</p><label for="answer">Photo date (DDMMYYYY)</label><input id="answer" inputmode="numeric" maxlength="8" placeholder="DDMMYYYY">';
+      content.innerHTML = '<img class="stage-photo" src="assets/me-and-sister.jpg" alt="A photograph of siblings together" loading="eager" decoding="async"><p>ഈ ചിത്രം എടുത്ത ദിവസത്തെ ഓർമ്മയുണ്ടോ? നിങ്ങളുടെ ഫോട്ടോ ഗാലറികൾ പരിശോധിച്ച് തീയതിയും മാസവും വർഷവും കണ്ടെത്തൂ. രണ്ടുപേരും സമ്മതിച്ചശേഷം നൽകുക.</p><label for="answer">Photo date (DDMMYYYY)</label><input id="answer" inputmode="numeric" maxlength="8" placeholder="DDMMYYYY">';
       $("stageButton").textContent = "Unlock next memory";
     } else if (stageIndex === 2) {
       $("stageKicker").textContent = "Chapter 04 · A letter from your children";
