@@ -50,23 +50,29 @@
     } else if (stageIndex === 2) {
       $("stageKicker").textContent = "Chapter 04 · A family memory";
       $("stageTitle").textContent = "One more memory";
-      content.innerHTML = '<div class="placeholder">Your third family photo will appear here.</div><p>ഇതാ മറ്റൊരു പ്രിയപ്പെട്ട ഓർമ്മ. ചിത്രം നോക്കി കുറച്ചു നേരം ഒരുമിച്ച് ഇരിക്കൂ.</p>';
+      content.innerHTML = '<img class="stage-photo" src="assets/parents-anniversary.jpeg" alt="A family photograph" onerror="this.style.display=\\"none\\";this.nextElementSibling.style.display=\\"grid\\""><div class="placeholder" style="display:none">Your third family photo will appear here once its file is uploaded.</div><p>ഇതാ മറ്റൊരു പ്രിയപ്പെട്ട ഓർമ്മ. ചിത്രം നോക്കി കുറച്ചു നേരം ഒരുമിച്ച് ഇരിക്കൂ.</p>';
       $("stageButton").textContent = "Continue to your video";
     } else if (stageIndex === 3) {
-      $("stageKicker").textContent = "Chapter 05 · A letter from your children";
+      $("stageKicker").textContent = "Chapter 05 · Your anniversary video";
+      $("stageTitle").textContent = "A message from your children";
+      content.innerHTML = '<p>ഒരു ചെറിയ വീഡിയോ സന്ദേശം നിങ്ങൾക്കായി… ❤️</p><div class="placeholder">Your anniversary video will be added here later.</div><button type="button" id="playVideoButton">▶ Watch your video</button><p class="small">The video will be connected before launch.</p>';
+      $("playVideoButton").addEventListener("click", openPersonalVideo);
+      $("stageButton").textContent = "Continue to the family letter";
+    } else if (stageIndex === 4) {
+      $("stageKicker").textContent = "Chapter 06 · A letter from your children";
       $("stageTitle").textContent = "അമ്മയ്ക്കും അച്ഛനും…";
       content.innerHTML = '<div class="memory-grid">' + photo("assets/step-two.jpg","Childhood memory beside a yellow bicycle","A memory from home") + photo("assets/me-and-sister.jpg","A photograph of siblings together","A memory with your sister") + '</div><p>പ്രിയപ്പെട്ട അമ്മയ്ക്കും അച്ഛനും,</p><p>നമ്മുടെ ജീവിതത്തിൽ ഒരുപാട് സന്തോഷങ്ങളും ചില കഷ്ടപ്പാടുകളും ഉണ്ടായിട്ടുണ്ട്. കുടുംബത്തിനായി നിങ്ങൾ ചെയ്ത ത്യാഗങ്ങളും ഞങ്ങൾക്ക് നൽകിയ സ്നേഹവും ഞാൻ ഒരിക്കലും മറക്കില്ല.</p><p>എല്ലാം എല്ലായ്പ്പോഴും പറയാറില്ലെങ്കിലും, ഞാൻ നിങ്ങളെ രണ്ടുപേരെയും ഒരുപാട് സ്നേഹിക്കുന്നു. ഇനിയും ഒരുപാട് സന്തോഷങ്ങളും നല്ല ഓർമ്മകളും നിങ്ങളോടൊപ്പം ഉണ്ടാകട്ടെ. നിങ്ങൾ രണ്ടുപേരും എന്നും സന്തോഷത്തോടെ ഇരിക്കണം.</p><p>വിവാഹവാർഷികാശംസകൾ, അമ്മേയും അച്ഛാ. ❤️</p><p><strong>സ്നേഹത്തോടെ,<br>നിങ്ങളുടെ മക്കൾ ❤️</strong></p><div class="divider"></div><a href="#" id="videoLink" style="display:block;text-align:center;padding:15px;border-radius:10px;background:var(--ink);color:#fff8eb;text-decoration:none">▶ എന്റെ വീഡിയോ കാണൂ · Watch my video</a>';
       $("videoLink").addEventListener("click", (event) => { event.preventDefault(); openPersonalVideo(); });
       $("stageButton").textContent = "Continue";
-    } else if (stageIndex === 4) {
-      $("stageKicker").textContent = "Chapter 06 · Final puzzle";
+    } else if (stageIndex === 5) {
+      $("stageKicker").textContent = "Chapter 07 · Final puzzle";
       $("stageTitle").textContent = "One last word";
       content.innerHTML = '<div class="memory-grid">' + photo("assets/step-two.jpg","Childhood memory beside a yellow bicycle","The journey") + photo("assets/me-and-sister.jpg","A photograph of siblings together","The people who matter") + '</div><div class="clue">The final clue is a place you know well. Share the letters and say the word together.</div><p>Appa’s letters: C · A. Amma’s letter: R.</p><label for="answer">Final word</label><input id="answer" autocomplete="off" maxlength="3" placeholder="Three letters">';
       $("stageButton").textContent = "Reveal final message";
     } else { show("final"); return; }
   }
   function submitStage() {
-    if (stageIndex === 2 || stageIndex === 3) { stageIndex += 1; renderStage(); return; }
+    if (stageIndex === 2 || stageIndex === 3 || stageIndex === 4) { stageIndex += 1; renderStage(); return; }
     const answer = $("answer");
     if (!answer) return;
     const value = answer.value.trim().replace(/\s/g, "").toUpperCase();
