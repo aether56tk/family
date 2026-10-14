@@ -59,3 +59,12 @@ The uploaded childhood photo of the little one beside the yellow bicycle is inte
 To wire in the actual photo, add the uploaded image to `assets/step-two.jpg` (the source image is currently attached in the ChatGPT conversation, not yet committed as a binary file in this repository). The next stage should display the sibling photo/video and ask for its date in **DDMM** format.
 
 The planned shared code remains `0520` (mother's day `05` followed by father's day `20`). The current website is still a prototype: the shared gate and cross-phone progress must be fully implemented and tested before launch.
+
+
+## Sibling photo and full-date memory challenge
+
+The user supplied a photograph of themself standing with their younger sister. It is intended for Chapter 03, after the childhood bicycle-photo clue and shared four-digit key. Add that photo to the repository as `assets/me-and-sister.jpg`. The website now references that asset path; the image binary itself has not yet been uploaded to GitHub.
+
+Parents must identify the **day, month, and year** when that photo was taken and enter the full date as `DDMMYYYY`. Update `CONFIG.photoDate` from `00000000` to the correct eight digits once the date is confirmed. The site will not accept the placeholder date.
+
+The earlier childhood bicycle image belongs in `assets/step-two.jpg` for the shared-key step.
