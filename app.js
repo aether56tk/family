@@ -20,7 +20,7 @@
     $("poem").textContent = role === "father"
       ? "ഇരുളിൽ വഴിയറിയാതെ നിന്നൊരു യാത്രയിൽ,\nപ്രഭയായ് കടന്നുവന്നവൾ…\nതളർന്നുപോയ നാളുകളിൽ പ്രതീക്ഷയായ്,\nജീവിതത്തിൽ പുതുവസന്തമായ് മാറിയവൾ…\n\nആ വെളിച്ചത്തിന്റെ ജന്മദിനമാണ്\nനിന്റെ ആദ്യത്തെ താക്കോൽ."
       : "ജീവിതമെന്ന മഴവഴികളിൽ,\nഎനിക്കൊരു കുടയായ് നിന്നവൻ…\nകാറ്റിലും കോളിലും കൈവിടാതെ,\nകുടുംബത്തിനായ് സ്വപ്നങ്ങൾ നെയ്തവൻ…\n\nആ തണലിന്റെ ജന്മദിനമാണ്\nനിന്റെ ആദ്യത്തെ താക്കോൽ.";
-    $("photoArea").innerHTML = '<div class="gallery-title">A few memories before your clue</div><div class="memory-grid">' + photo("assets/step-two.jpg","Childhood memory beside a yellow bicycle","A little memory from home") + photo("assets/me-and-sister.jpg","A photograph of siblings together","A memory with your sister") + '</div>';
+    $("photoArea").innerHTML = '<div class="placeholder">Your replacement family photo will appear here when you send it.</div>';
     $("birthday").value = "";
     $("letterError").textContent = "";
     show("letter");
@@ -40,12 +40,12 @@
     if (stageIndex === 0) {
       $("stageKicker").textContent = "Chapter 02 · A memory from home";
       $("stageTitle").textContent = "First, one little memory";
-      content.innerHTML = '<img class="stage-photo" src="assets/step-two.jpg" alt="Childhood memory beside a yellow bicycle" loading="eager" decoding="async"><p>ഈ പഴയ ഓർമ്മ നോക്കൂ. അടുത്ത വാതിൽ തുറക്കാൻ നിങ്ങൾ രണ്ടുപേരും ചേർന്ന് കണ്ടെത്തിയ നാല് അക്കങ്ങൾ നൽകൂ.</p><label for="answer">Shared four-digit key</label><input id="answer" inputmode="numeric" maxlength="4" placeholder="Four-digit key">';
+      content.innerHTML = '<div class="placeholder">Your replacement family photo will appear here when you send it.</div><p>ഈ പഴയ ഓർമ്മ നോക്കൂ. അടുത്ത വാതിൽ തുറക്കാൻ നിങ്ങൾ രണ്ടുപേരും ചേർന്ന് കണ്ടെത്തിയ നാല് അക്കങ്ങൾ നൽകൂ.</p><label for="answer">Shared four-digit key</label><input id="answer" inputmode="numeric" maxlength="4" placeholder="Four-digit key">';
       $("stageButton").textContent = "Unlock next memory";
     } else if (stageIndex === 1) {
       $("stageKicker").textContent = "Chapter 03 · You and your sister";
       $("stageTitle").textContent = "When was this picture taken?";
-      content.innerHTML = '<img class="stage-photo" src="assets/me-and-sister.jpg" alt="A photograph of siblings together" loading="eager" decoding="async"><p>ഈ ചിത്രം എടുത്ത ദിവസത്തെ ഓർമ്മയുണ്ടോ? നിങ്ങളുടെ ഫോട്ടോ ഗാലറികൾ പരിശോധിച്ച് തീയതിയും മാസവും വർഷവും കണ്ടെത്തൂ. രണ്ടുപേരും സമ്മതിച്ചശേഷം നൽകുക.</p><label for="answer">Photo date (DDMMYYYY)</label><input id="answer" inputmode="numeric" maxlength="8" placeholder="DDMMYYYY">';
+      content.innerHTML = '<div class="placeholder">Your replacement family photo will appear here when you send it.</div><p>ഈ ചിത്രം എടുത്ത ദിവസത്തെ ഓർമ്മയുണ്ടോ? നിങ്ങളുടെ ഫോട്ടോ ഗാലറികൾ പരിശോധിച്ച് തീയതിയും മാസവും വർഷവും കണ്ടെത്തൂ. രണ്ടുപേരും സമ്മതിച്ചശേഷം നൽകുക.</p><label for="answer">Photo date (DDMMYYYY)</label><input id="answer" inputmode="numeric" maxlength="8" placeholder="DDMMYYYY">';
       $("stageButton").textContent = "Unlock next memory";
     } else if (stageIndex === 2) {
       $("stageKicker").textContent = "Chapter 04 · A letter from your children";
